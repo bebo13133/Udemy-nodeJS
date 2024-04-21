@@ -2,7 +2,10 @@ const path = require('path')
 const http = require('http');
 const express = require('express');
 const app= express();
-app.set('view engine', 'pug');
+const expressHbs = require('express-handlebars');
+
+app.engine('hbs',expressHbs())
+app.set('view engine', 'hbs');
 app.set('views', 'views');
 
 const bodyParser = require('body-parser');
