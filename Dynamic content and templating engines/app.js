@@ -1,7 +1,7 @@
 const path = require('path')
 const http = require('http');
 const express = require('express');
-const {engine} = require('express-handlebars');
+// const {engine} = require('express-handlebars');
 const app= express();
 
 // app.engine('hbs', engine({
@@ -9,7 +9,7 @@ const app= express();
 //     extname: "hbs",
 //     defaultLayout: 'main-layout'
 //   }));
-app.set('view engine', 'hbs');
+app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 const bodyParser = require('body-parser');
