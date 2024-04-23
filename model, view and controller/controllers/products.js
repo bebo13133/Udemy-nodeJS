@@ -15,3 +15,15 @@ exports.postAddProduct = (req,res,next)=> {
     res.redirect('/')
     // res.send('<form action="/product" method="POST"><input type="text" name="title"><button type="submit">Add product<button/><form/>')
 }
+
+exports.getProducts=(req,res,next)=> {
+    // console.log("In another middleware!")
+  
+res.render('shop', {
+    prods:products,pageTitle:'Shop', 
+    path:'/', 
+    hasProducts: products.length>0,
+    activeShop:true,
+    productCSS:true
+})
+}
