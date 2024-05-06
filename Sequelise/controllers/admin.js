@@ -60,9 +60,10 @@ exports.postEditProduct = (req, res, next) => {
  })
  .then(result=>{
   console.log('UPDATE PRODUCT')
+  res.redirect('/admin/products');
+
  })
  .catch(err=>console.log(err))
-  res.redirect('/admin/products');
 };
 exports.getProducts = (req, res, next) => {
   Product.findAll()
